@@ -1,0 +1,15 @@
+{
+  "name": "bambling-rackit",
+  "version": "0.0.1",
+  "author": "Stevn Bambling",
+  "summary": "Install and Configure RackIT Data Center Inventory Management",
+  "license": "Apache-2.0",
+  "source": "https://github.com/smbambling/bambling-rackit",
+  "project_page": "https://github.com/smbambling/bambling-rackit/issues",
+  "issues_url": "https://github.com/smbambling/bambling-rackit/wiki",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 2.0.0"},
+    {"name":"arin-file_header","version_requirement":">= 0.0.1"},
+    {"name":"puppet/archive","version_requirement":">=0.3.0"}
+  ]
+}
