@@ -5,7 +5,7 @@
 #
 class rackit::config {
   
-  $concat_target_rackit_conf = "${rackit::rackit_destination}/conf/rackit.conf"
+  $concat_target_rackit_conf = "${rackit::destination}/conf/rackit.conf"
 
   concat { $concat_target_rackit_conf:
     ensure => present,
@@ -18,7 +18,7 @@ class rackit::config {
 
   concat::fragment { 'puppet_header':
     target  => $concat_target_rackit_conf,
-    content => template("$::file_header::pound_header"),
+    content => template($::file_header::pound_header),
     order   => '00',
   }
 
@@ -27,5 +27,4 @@ class rackit::config {
     content => template('rackit/rackit.conf.erb'),
     order   => '01',
   }
- 
 }

@@ -13,9 +13,10 @@ class rackit::install {
 
   file { $rackit::destination:
     ensure => directory,
-    owner  => 'root',
-    group  => 'root',
-    mode   => '0755',
+    ensure  => directory,
+    owner   => $rackit::rackit_user,
+    group   => $rackit::rackit_group,
+    mode    => '0755',
   } ->
   archive { "/tmp/${install_file}":
     source       => $rackit::source_url,
